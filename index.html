@@ -5,6 +5,115 @@
 <body>
 <table border="1">
 
+<!-- ========START DavidovitchEtAl2011 ============================================ -->
+<tr>
+<td>
+<img src="DavidovitchEtAl2011.png">
+</td>
+<td>
+<a href="DavidovitchEtAl2011.pdf">DavidovitchEtAl2011</a>
+</td>
+<td>
+<b>Notes:</b> 
+<ul>
+<li> Lovely, lovely, lovely...
+<li> Lame problem controlled by applied tensions. Near threshold
+  analysis (linear stab analysis) agrees with ComanBassom2007
+  (and "our" approach; see discussion/notes for ComanBassom2007 paper).
+<li> FFT analysis: extent of wrinkling region from tension field
+  theory (neglecting all bending effects; setting epsilon = 0).
+  Wrinkling wavenumber follows from next term in that expansion
+  (though not done (or at least not presented) formally in this way).
+<li> Stress field and number of wrinkles change signficantly as one
+  goes from NT to FFT regime; wrinkle extent more robust than wavenumber.
+<li> Comments on apparent discrepancy with GeminardEtAl2004
+  experiments (range of epsilon considered there is too small to
+  disprove the scalings found here).
+<li> Single parameter case (T_outer=0) is excluded from analysis
+because everything's scaled on T_outer (as in ComanBassom2007) where
+everything's scaled on U_outer=U_2).
+</ul>
+<!--     ........UNCOMMENT THIS TO ADD SCANNED NOTES......... -->
+<!-- 
+<b>Scanned Notes:</b> <a href="DavidovitchEtAl2011_notes.pdf">DavidovitchEtAl2011_notes.pdf</a>
+-->
+<!--     ........END UNCOMMENT THIS TO ADD SCANNED NOTES..... -->
+</td>
+</tr>
+<!-- ========END DavidovitchEtAl2011 ============================================ -->
+
+
+<!-- ========START Davidovitch2012 ============================================ -->
+<tr>
+<td>
+<img src="Davidovitch2012.png">
+</td>
+<td>
+<a href="Davidovitch2012.pdf">Davidovitch2012</a>
+</td>
+<td>
+<b>Notes:</b> 
+<ul>
+<li> Lovely follow-up from DavidovitchEtAl2011 and again full of genius.
+<li> Assuming that NT and FFT (and everything in between!) wrinkles 
+can be described by a single azimuthal Fourier mode they
+  show how the likely-to-observed wrinkle wavenumber (assumed to 
+  follow from overall energy minimisation; they are still checking all 
+  possible modes!) evolves as one increases the forcing (at the inner
+  boundary) beyond threshold from NT to FFT regime. Ties in nicely
+  with the limits obtained in DavidovitchEtAl2011 and rectifies some
+  problems in the earlier analysis.
+<li> Discusses limitations and possible ways to extend theory to
+  multiple modes etc. very honestly.
+</ul>
+<!--     ........UNCOMMENT THIS TO ADD SCANNED NOTES......... -->
+<!-- 
+<b>Scanned Notes:</b> <a href="Davidovitch2012_notes.pdf">Davidovitch2012_notes.pdf</a>
+-->
+<!--     ........END UNCOMMENT THIS TO ADD SCANNED NOTES..... -->
+</td>
+</tr>
+<!-- ========END Davidovitch2012 ============================================ -->
+
+
+
+<!-- ========START GeminardEtAl2004 ============================================ -->
+<tr>
+<td>
+<img src="GeminardEtAl2004.png">
+</td>
+<td>
+<a href="GeminardEtAl2004.pdf">GeminardEtAl2004</a>
+</td>
+<td>
+<b>Notes:</b> 
+<ul>
+<li> Very nice, mainly experimental paper that uses essentialy
+the setup that Draga proposed (and already has in the lab). Main 
+difference is that the deflection inside the inner support is created
+by suction rather than a pokey stick).
+<li> Note lovely introduction with lots of good applications too!
+<li> Experiments show that number of wrinkles is independent of
+  displacement at inner radius
+  but inreases linearly with radius of inner cylinder. Increase in
+  initial tension (via stretching of the membrane -- achieved by a 
+  nice mechanism!)
+  leads to a slight increase in wrinkling wavenumber.
+<li> Note: linear dependence on wrinkling wavenumber on inner radius
+contradicts DavidovitchEtAl2011 but they comment on this and stress
+  that range of epsilon (their notation) is too small to be conclusive.
+<li> Wrinkling is supercritical (square root behaviour of amplitude).
+<li> All done for one fixed membrane thickness, h=0.2mm. 
+</ul>
+<!--     ........UNCOMMENT THIS TO ADD SCANNED NOTES......... -->
+<!-- 
+<b>Scanned Notes:</b> <a href="GeminardEtAl2004_notes.pdf">GeminardEtAl2004_notes.pdf</a>
+-->
+<!--     ........END UNCOMMENT THIS TO ADD SCANNED NOTES..... -->
+</td>
+</tr>
+<!-- ========END GeminardEtAl2004 ============================================ -->
+
 <!-- ========START ComanBassom2007 ============================================ -->
 <tr>
 <td>
@@ -20,7 +129,17 @@
 <li> Setup: Given bending stiffness, radii and material properties, 
 apply outward displacement U_outer at outer edge. Then increase inner displ.
 (characterised via lambda=U_inner/U_outer) until wrinkling occurs.
-<li> Prediction for most unstable azimuthal wavenumber: n = O(mu^{3/4}) 
+<li> Prediction for most unstable azimuthal wavenumber: n =
+  O(mu^{3/4})
+<li> Given that mu^2 = 12 U_outer R_outer / h^2, this is consistent
+  with DavidovitchEtAl2011 prediction, eqn (10) in the latter paper 
+  (as claimed there).
+<li> Note that Coman's analysis assumes U_outer > 0  so excludes the single
+  parameter problem that we're after. Using our approach it's possible
+to show that for U_outer \ne 0, the wavenumber depends on U_outer
+  R_outer / h^2 (as in Coman & DavidovitchEtAl2011's analyses) though
+we can't extract the power law.
+<li> <b>Note that there's a corrigendum to the paper:</b> <a href="ComanBassom2007_corrigendum.pdf">ComanBassom2007_corrigendum.pdf</a>
 </ul>
 </td>
 </tr>

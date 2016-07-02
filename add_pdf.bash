@@ -15,7 +15,7 @@ if [ -e $pdf_file ]; then
     echo " "
     echo "      "$pdf_file
     echo " " 
-    echo "already exists locally. Continue i.e. overwrite?"
+    echo "already exists locally. Continue i.e. overwrite (y/n)?"
     read OPT
     if [ $OPT == "Y" -o $OPT == "y" ]; then
         echo "...overwriting"
@@ -44,10 +44,16 @@ echo "<td>" >> new_entry.txt
 echo "<a href=\""$stem".pdf\">"$stem"</a>" >> new_entry.txt
 echo "</td>" >> new_entry.txt
 echo "<td>" >> new_entry.txt
+echo "<b>Notes:</b> " >> new_entry.txt
 echo "<ul>" >> new_entry.txt
 echo "<li> bla" >> new_entry.txt
 echo "<li> bla" >> new_entry.txt
 echo "</ul>" >> new_entry.txt
+echo "<!--     ........UNCOMMENT THIS TO ADD SCANNED NOTES......... -->"  >> new_entry.txt
+echo "<!-- " >> new_entry.txt
+echo "<b>Scanned Notes:</b> <a href=\""$stem"_notes.pdf\">"$stem"_notes.pdf</a>" >> new_entry.txt
+echo "-->" >> new_entry.txt
+echo "<!--     ........END UNCOMMENT THIS TO ADD SCANNED NOTES..... -->"  >> new_entry.txt
 echo "</td>" >> new_entry.txt
 echo "</tr>" >> new_entry.txt
 echo "<!-- ========END $stem ============================================ -->"  >> new_entry.txt

@@ -110,6 +110,8 @@ contradicts DavidovitchEtAl2011 but they comment on this and stress
   that range of epsilon (their notation) is too small to be conclusive.
 <li> Wrinkling is supercritical (square root behaviour of amplitude).
 <li> All done for one fixed membrane thickness, h=0.2mm. 
+<li> Comment on beta=0 (zero pre-stretch, i.e. no outer displacement)
+being both odd (in terms of theory) and difficult (experimentally).
 </ul>
 <b>Scanned Notes:</b> <a href="GeminardEtAl2004_notes.pdf">GeminardEtAl2004_notes.pdf</a>
 </td>
@@ -202,8 +204,44 @@ deformations.
 </td>
 <td>
 <ul>
-<li> bla
-<li> bla
+<li> Disclaimer before we start: Despite all the problems listed below a
+really lovely paper...
+<li> Somewhat ad-hoc (rather than rational (as claimed)) extension to
+  FvK by using full geometrically nonlinear expressions for in-plane
+  stress. This is supposed to cater for large strain but ignores the
+  fact that Hooke's law is still built into the theory (and is
+  unlikely to apply at such large strains).
+<li> Discretisation with Hermite quads; stability analysis and large
+amplitude computations.
+<li> Key feature of extended model is that:
+<ul>
+<li> Wrinkling only happens for certain sheet aspect ratios
+<li> Amplitude of wrinkles grows (once past threshold) but then decays
+again; this is claimed to be "realistic" though no experimental
+  references are provided. By contrast, FvK wrinkle amplitude grows 
+  indefinitely, which admittedly seems unlikely...
+<li> FvK computations do not exploit the (apparently unrecognised)
+fact that the thickness can be scaled out. Rescaling, e.g. Fig. 6a,b
+(which shows that the onset of wrinkling and the subsequent 
+finite amplitude deformation do depend on thickness) shows that 
+data collapses as we predicted.
+This implies that for a given aspect ratio and material property 
+(Poisson's ratio) only one computation is required; data for specific
+thicknesses can then be recovered from this. 
+<a href="HealeyEtAl2013_scaled_fig6a_and_6b.png">Plot is here.</a>
+<li> Symmetric and antisymmetric wrinkling occurs (to within numerical
+accuracy) at exactly the same pre-stretch (which is very
+counter-intuitive because this mode coalescence is
+non-generic). Implies that any super-position of the symmetric and 
+antisymmetric modes is also a solution; this implies the existence
+of a whole "orbit" of solutions.
+</ul>
+<li> <b>Good news:</b> The paper certainly motivates looking into 
+thickness effects. The ad-hoc modification to the in-plane strain
+means it no longer scales like (h/L)^2 but also has an (h/L)^4 term in
+it. This introduces a genuine thickness dependence in the results.
+Other (better?) modifications are likely to do so too. Paper provides
+brief acknowledgement of Steigmann's theory.
 </ul>
 </td>
 </tr>

@@ -5,6 +5,34 @@
 <body>
 <table border="1">
 
+
+
+<b>Rules for filenames:</b> 
+<ul>
+<li> Single author: Bloggs2014.pdf
+<li> Two authors: BloggsSoggs2014.pdf
+<li> Three or more authors: BloggsEtAl2014.pdf
+<li> Multiple papers which would end up with same
+filename:  BloggsEtAl2014b.pdf etc.
+<li> Use same stem for all associated material (such as scanned notes
+  etc.). Script already provides commented out hyperlink to
+<tt>stem</tt>_notes.pdf (e.g. BloggsEtAl2014b_notes.pdf). Feel free to add
+  others, e.g. BloggsEtAl2014b_fig6a.csv, BloggsEtAl2014b_fig6a.png etc.
+</ul>
+
+
+<b>How to create new entry:</b> 
+<ul>
+<li> Run 
+<center>
+<tt>./add_pdf.bash BloggsSoggs2014.pdf</tt>
+</center>
+This creates on-screen output that can be pasted into index.html.
+Make sure you include start/end lines which may be useful for sorting entries
+at some point. Then populate bullet point list with comments.
+</ul>
+
+
 <b>General scanned notes:</b> 
 <ul>
 <li> <a href="JulioNondimNotes.pdf">JulioNondimNotes.pdf</a>

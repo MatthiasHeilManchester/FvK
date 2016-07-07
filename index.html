@@ -256,13 +256,28 @@ longer.
 <li> FvK is asymtotically accurate, given certain scaling assumptions
 (which are the questionable bit), so its likely that whatever
 FvK is doing wrong at large strains is due to these implicit scaling
-assumptions breaking down.  If the tension field theory model (membrane)
-with a small bending correction were to apply asymptotically instead, 
-at small h, then the amplitude of the wrinkles would decrease and the
- number of wrinkles would increase, presumeably until the tiny bending 
-correction kicks in. It's possible that the fact that the FvK model does
-not predict this is a product of `the over seperation of scales' that 
-[Freisecke et. al., 2006] describe.
+assumptions breaking down.  
+<li> According to several papers [Hure et al. 2012, Davidovitch et al. 2012]
+ we should expect that the wrinkled region at very large strains completely 
+"collapses" the compressive stress (the tensile stress remains virtually
+ unchanged), by means of the formation of an increasingly fine wrinkling
+ pattern with vanishing amplitude.
+<li> This is expected in sheets where FFT holds [Davidovitch et al. 2012]
+in which, in accordance with the relaxation model of tension field theory, 
+the fine wrinkling pattern (that is not characterised by the TFT model but is
+accounted for by the "subdominant energy") is assumed to be present in
+the "collapsed" region [Pipkin 1986, Steigmann 1990, Taylor et al. 2014].
+<li> This only works for sheets that have tensile stresses in one direction
+that suppress the formation of "folds" and crumples. Stress focusing such 
+as folding and crumpling occur in sheets that are "slack" in both directions 
+(see [Demery et al. 2014] and [Holmes and Crosby 2010]).
+<li> It's possible that the fact that the FvK model does
+not predict this is a product of "the over separation of scales" that 
+[Freisecke et. al., 2006] describe: this over separation issue to the fact 
+that the scaling assumptions of membrane, Foppl von Karman and bending 
+theory mean that these theories all have completely different behaviour 
+in the limit of vanishing h built-in, which has to be assumed a priori. 
+
 <li> FvK computations do not exploit the (apparently unrecognised)
 fact that the thickness can be scaled out. Rescaling, e.g. Fig. 6a,b
 (which shows that the onset of wrinkling and the subsequent 

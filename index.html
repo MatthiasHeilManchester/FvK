@@ -249,6 +249,20 @@ amplitude computations.
 again; this is claimed to be "realistic" though no experimental
   references are provided. By contrast, FvK wrinkle amplitude grows 
   indefinitely, which admittedly seems unlikely...
+<li> In the limit h tends to 0, the extra terms in the strain will
+vanish, leaving behind exactly FVK. This is also evident in
+the plots, as with smaller thickness the solutions match for
+longer. 
+<li> FvK is asymtotically accurate, given certain scaling assumptions
+(which are the questionable bit), so its likely that whatever
+FvK is doing wrong at large strains is due to these implicit scaling
+assumptions breaking down.  If the tension field theory model (membrane)
+with a small bending correction were to apply asymptotically instead, 
+at small h, then the amplitude of the wrinkles would decrease and the
+ number of wrinkles would increase, presumeably until the tiny bending 
+correction kicks in. It's possible that the fact that the FvK model does
+not predict this is a product of `the over seperation of scales' that 
+[Freisecke et. al., 2006] describe.
 <li> FvK computations do not exploit the (apparently unrecognised)
 fact that the thickness can be scaled out. Rescaling, e.g. Fig. 6a,b
 (which shows that the onset of wrinkling and the subsequent 
@@ -340,6 +354,48 @@ brief acknowledgement of Steigmann's theory.
 </tr>
 <!-- ========END Steigmann2013b ============================================ -->
 <!-- ==================END ADD THIS BIT TO index.html================ -->
+ 
+<!-- ========START CerdaMahadeven2003 ============================================ -->
+<tr>
+<td>
+<img src="CerdaMahadeven2003.png">
+</td>
+<td>
+<a href="CerdaMahadeven2003.pdf">CerdaMahadeven2003</a>
+</td>
+<td>
+<b>Notes:</b> 
+<ul>
+<li> Lovely explanation of how the Poisson effect induces wrinkling in this 
+system.
+<li> Really well explained Physics and an intuitive way of thinking about wrinkling.
+<li> Builds on the results of tension field theory to create a compromise 
+`far--from--threshold' theory.
+<li> The assumptions drastically simplify the problem, but capture the essence 
+of the behaviour (certainly in hindsight with more complex studies such as 
+[Puntel, et al. 2010],  and numerics of reduced or full problems 
+[Kim, et al. 2010][Nayvar et al. 2011]) which is a credit to the shear intuition
+ of the authors.
+<li> They suggest the use of geometrically non--linear elasticity, but even so the 
+Foppl von Karman--like functional they use is probably innappropriate for the 
+picture shown at 10% stretch.
+<li> To model the real problem they clamp two ends of the sheet which is in a 
+state of plane stress, then impose uniform lateral contraction (related to the
+transverse stretch by the Poisson effect) by Lagrange multiplier, to approximate
+ the Poisson effect. 
+<li> We can non-dimensionalise it all and just get lambda ~ T^(-1/4) where 
+T is the nondimensional tension (i.e. the single control parameter).
+</ul>
+<!--     ........UNCOMMENT THIS TO ADD SCANNED NOTES......... -->
+<!-- 
+<b>Scanned Notes:</b> <a href="CerdaMahadeven2003_notes.pdf">CerdaMahadeven2003_notes.pdf</a>
+-->
+<!--     ........END UNCOMMENT THIS TO ADD SCANNED NOTES..... -->
+</td>
+</tr>
+<!-- ========END CerdaMahadeven2003 ============================================ -->
+
+
 
 </table>
 </body>

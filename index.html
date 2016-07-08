@@ -166,10 +166,10 @@ apply outward displacement U_outer at outer edge. Then increase inner displ.
 <li> Given that mu^2 = 12 U_outer R_outer / h^2, this is consistent
   with DavidovitchEtAl2011 prediction, eqn (10) in the latter paper 
   (as claimed there).
-<li> Note that Coman's analysis assumes U_outer > 0  so excludes the single
+<li> Note that Coman's analysis assumes U_outer &lt; 0  so excludes the single
   parameter problem that we're after. Using our approach it's possible
 to show that for U_outer \ne 0, the wavenumber depends on U_outer
-  R_outer / h^2 (as in Coman & DavidovitchEtAl2011's analyses) though
+  R_outer / h^2 (as in Coman and DavidovitchEtAl2011's analyses) though
 we can't extract the power law.
 <li> <b>Note that there's a corrigendum to the paper:</b> <a href="ComanBassom2007_corrigendum.pdf">ComanBassom2007_corrigendum.pdf</a>
 </ul>
@@ -215,14 +215,11 @@ plastic surgery.
 <li> Derivation of equations (of sorts) for plates subject to large
 deformations. 
 <li>  This extends the work of [Hilgers and Pipkin, 1992] to
-      formulate a non-linear shell theory 
+      formulate a non-linear plate theory 
       that is the leading order 2D model that approximates 3D elasticity.
+<li> This is followed up in a lot more detail in [Steigmann, 2010]
 <li> No numerics. 
 <li> Allegedly rigorous.
-<li> DAVID: Query from MH: How does this differ from Steigmann2013b. I
-  suppose the current one is plates, whereas the latter one is for 
-  general shells? Please confirm (your addition to my comment
-  mentions shells...)
 </ul>
 </td>
 </tr>
@@ -325,10 +322,15 @@ brief acknowledgement of Steigmann's theory.
 <b>Notes:</b> 
 <ul>
 <li>   This article presents a theory for sheets that incorporates finite strain
-  into the Koiter model. 
+  into the Koiter model.
+<li> This again spcialises to reflection symmetry of the plate properties with
+ respect to the midplane. It also assumes isotropic plates properties.
+<li> The model has to satisfy certain constituitive requirements, which are outlined
+in [Steigmann, 2003] which encompasses the materials studied by [Carroll, 1988].
+<li> Comment (D): I think this will include the normal Kirchhoff St Venant model, but
+I have not managed to decipher [Steigmann, 2003] yet..
 <li> It is well--posed as a minimisation problem, but no
-  existence theorums have been proven. 
-
+  existence and uniqueness theorems have been proven. 
 <li> This is the model [Taylor, Bertoldi 2014]
   use and also [Taylor, Davidovitch 2015], it is also the theory that I propose
   we write into oomph-lib. 
@@ -356,16 +358,24 @@ brief acknowledgement of Steigmann's theory.
 <td>
 <b>Notes:</b> 
 <ul>
-<li>   This article presents an alternative derivation of Koiters shell theory that
+<li> This presents the nonlinear Koiter theory of shells and places it in relation to 3D 
+elasticity. It additionally presents an extension to finite midsurface strains, which
+restricts the model to Kirchhoff St Venant consituitive laws.
+<li> This article presents an alternative derivation of Koiters shell theory that
   allows an insight into its usefulness and scope in relation to 3D elasticity.
+<li> As with all these models it is assumed that h &lt; &lt; L 
+<li> Further specialisation to shells with midplane symmetry of material properties is made.
 <li> This shows exactly how the original Koiter model and the Steigmann-Koiter model
     differ: on the stress assumption.
-<li> The only assumption Stiegmann makes is that the midsurface stress, S= o(1), and thus vanishes
-    with vanishing thickness, as opposed to the Koiter model which assumes that the stress
-    scales as S= a h + b h^2, with a and b independent of h.
+<li> For the Koiter model then, weakly non--linear extension to the Kirchhoff-St Venant model
+are appropriate.
+<li> The final assumption Stiegmann makes for his model is that the midsurface stress, S= o(1), 
+and thus vanishes with vanishing thickness, as opposed to the Koiter model which assumes that 
+the stress  scales as S= a h + b h^2, with a and b independent of h.
+<li> If the weaker assumption is used, the consituitive function has to be Kirchhoff-St Venant
+   which gives seperable bending and stretching energies.
 <li> This article proposes the model of [Steigmann, 2013a] as an alternative to the Koiter
-    model. 
-<li> DAVID: Query from MH: How does this one differ  from Steigmann2007?
+    model and an extension to finite midsurface strains.
 </ul>
 <!--     ........UNCOMMENT THIS TO ADD SCANNED NOTES......... -->
 <!-- 
@@ -415,7 +425,47 @@ T is the nondimensional tension (i.e. the single control parameter).
 <!--     ........END UNCOMMENT THIS TO ADD SCANNED NOTES..... -->
 </td>
 </tr>
-<!-- ========END CerdaMahadeven2003 ============================================ -->
+
+<!-- ========START Steigmann2008 ============================================ -->
+<tr>
+<td>
+<img src="Steigmann2008.png">
+</td>
+<td>
+<a href="Steigmann2008.pdf">Steigmann2008</a>
+</td>
+<td>
+<b>Notes:</b> 
+<ul>
+<li> Shell and plate theory for linear elasticity.
+<li> Generalises linear Koiter theory to include order h^3 terms
+<li> Also purports to includes a constrained model with "non--standard 2D 
+strain-gradient effects" that affect the equations in a thin layer near an edge. 
+These are motivated by comparision to 3D elasticity.
+<li> Incorporates the models of bending and stretching under single framework with an
+explicit h parameter.
+<li> The in and out of plane equations decouple for plates, giving the biharmonic
+ equation, and a seperate equation for in--plane behaviour which contains h 
+dependance.
+<li> The boundary condtitons on the bending equation seem to be of standard form,
+i.e mnn=Mnn and vn=-dl/dn-dmnl/dl=Vn (where l is laplacian and mnn, mnl are internal 
+normal and twisting moments respectively. Mnn is an applied normal moment and Vn is
+an applied edge force per unit length)
+<li> Comment (D): He remarks that "classical plate theory... corresponds to conditions (m_x,m_y)=0
+for which he says his assumption is less restrictive. Is the condition on (m_x,m_y)
+not the "naive" b/c that Poisson proposed and later corrected by Kirchhoff (see Selvadurai,
+ ~page 298).
+
+</ul>
+<!--     ........UNCOMMENT THIS TO ADD SCANNED NOTES......... -->
+<!-- 
+<b>Scanned Notes:</b> <a href="Steigmann2008_notes.pdf">Steigmann2008_notes.pdf</a>
+-->
+<!--     ........END UNCOMMENT THIS TO ADD SCANNED NOTES..... -->
+</td>
+</tr>
+<!-- ========END Steigmann2008 ============================================ -->
+
 
 
 

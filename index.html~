@@ -58,7 +58,7 @@ at some point. Then populate bullet point list with comments.
   theory (neglecting all bending effects; setting epsilon = 0).
   Wrinkling wavenumber follows from next term in that expansion
   (though not done (or at least not presented) formally in this way).
-<li> Stress field and number of wrinkles change significantly as one
+<li> Stress field and number of wrinkles change signficantly as one
   goes from NT to FFT regime; wrinkle extent more robust than wavenumber.
 <li> Comments on apparent discrepancy with GeminardEtAl2004
   experiments (range of epsilon considered there is too small to
@@ -122,14 +122,14 @@ can be described by a single azimuthal Fourier mode they
 <td>
 <b>Notes:</b> 
 <ul>
-<li> Very nice, mainly experimental paper that uses essentially
+<li> Very nice, mainly experimental paper that uses essentialy
 the setup that Draga proposed (and already has in the lab). Main 
 difference is that the deflection inside the inner support is created
 by suction rather than a pokey stick).
 <li> Note lovely introduction with lots of good applications too!
 <li> Experiments show that number of wrinkles is independent of
   displacement at inner radius
-  but increases linearly with radius of inner cylinder. Increase in
+  but inreases linearly with radius of inner cylinder. Increase in
   initial tension (via stretching of the membrane -- achieved by a 
   nice mechanism!)
   leads to a slight increase in wrinkling wavenumber.
@@ -256,7 +256,7 @@ again; this is claimed to be "realistic" though no experimental
 vanish, leaving behind exactly FVK. This is also evident in
 the plots, as with smaller thickness the solutions match for
 longer. 
-<li> FvK is asymptotically accurate, given certain scaling assumptions
+<li> FvK is asymtotically accurate, given certain scaling assumptions
 (which are the questionable bit), so its likely that whatever
 FvK is doing wrong at large strains is due to these implicit scaling
 assumptions breaking down.  
@@ -325,7 +325,7 @@ brief acknowledgement of Steigmann's theory.
 into the Koiter model.
 <li> It specialises to the case of reflection symmetry of the plate properties 
 with respect to the midplane. It also assumes isotropic plates properties.
-<li> The model has to satisfy certain constitutive requirements, which are 
+<li> The model has to satisfy certain constituitive requirements, which are 
 outlined in [Steigmann, 2003] which encompasses the materials studied by 
 [Carroll, 1988].
 <li> Comment (D): I think this will include the normal Kirchhoff St Venant model
@@ -376,8 +376,8 @@ Venant model are appropriate.
 stress, S= o(1), and thus vanishes with vanishing thickness, as opposed to the 
 Koiter model which assumes that the stress  scales as S= a h + b h^2, with a and
  b independent of h.
-<li> If the weaker assumption is used, the constitutive function has to be 
-Kirchhoff-St Venant which gives separable bending and stretching energies.
+<li> If the weaker assumption is used, the consituitive function has to be 
+Kirchhoff-St Venant which gives seperable bending and stretching energies.
 <li> This article proposes the model of [Steigmann, 2013a] as an alternative to 
 the Koiter model and an extension to finite midsurface strains.
 </ul>
@@ -414,16 +414,16 @@ of the behaviour (certainly in hindsight with more complex studies such as
 [Kim, et al. 2010][Nayvar et al. 2011]) which is a credit to the sheer intuition
  of the authors.
 <li> They suggest the use of geometrically non--linear elasticity, but even so 
-the Foppl von Karman--like functional they use is probably inappropriate for the 
+the Foppl von Karman--like functional they use is probably innappropriate for the 
 picture shown at 10% stretch.
 <li> To model the real problem they clamp two ends of the sheet which is in a 
 state of plane stress, then impose uniform lateral contraction (related to the
 transverse stretch by the Poisson effect) by Lagrange multiplier, to approximate
  the Poisson effect. 
-<li> We can non-dimensionalize it all and just get lambda ~ T^(-1/4) where 
-T is the non-dimensional tension (i.e. the single control parameter).
+<li> We can non-dimensionalise it all and just get lambda ~ T^(-1/4) where 
+T is the nondimensional tension (i.e. the single control parameter).
 <li> Scanned notes show that prediction for wavenumber (under equation (5))
-  is consistent with our FvK non-dimensionalization. 
+  is consistent with our FvK non-dimensionalisation. 
 <li> Amplitude grows indefinitely with imposed stretch (again under
   eqn (5)). As Healey observes this seems unlikely and may well
 indicate another shortcoming of FvK. Mahadevan's prediction
@@ -451,14 +451,14 @@ consistent with HealeyEtAl2013, based on the scaled scans of his Fig.
 <li> Generalises linear Koiter theory to include order h^3 terms
 <li> Also purports to includes a constrained model with "non--standard 2D 
 strain-gradient effects" that affect the equations in a thin layer near an edge. 
-These are motivated by comparison to 3D elasticity.
+These are motivated by comparision to 3D elasticity.
 <li> Incorporates the models of bending and stretching under single framework 
 with an explicit h parameter.
 <li> The in and out of plane equations decouple for plates, giving the biharmonic
- equation, and a separate equation for in--plane behaviour which contains h 
-dependence.
-<li> The boundary conditions on the bending equation seem to be of standard form,
-i.e mnn=Mnn and vn=-dl/dn-dmnl/dl=Vn (where l is Laplacian and mnn, mnl are 
+ equation, and a seperate equation for in--plane behaviour which contains h 
+dependance.
+<li> The boundary condtitons on the bending equation seem to be of standard form,
+i.e mnn=Mnn and vn=-dl/dn-dmnl/dl=Vn (where l is laplacian and mnn, mnl are 
 internal normal and twisting moments respectively. Mnn is an applied normal 
 moment and Vn is an applied edge force per unit length)
 <li> Comment (D): He remarks that "classical plate theory... corresponds to 

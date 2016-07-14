@@ -308,13 +308,13 @@ brief acknowledgement of Steigmann's theory.
 </tr>
 <!-- ========END HealeyEtAl2013 ============================================ -->
 
-<!-- ========START NayvarRavi-Chandar2015 ============================================ -->
+<!-- ========START NayyarEtAl2015 ============================================ -->
 <tr>
 <td>
-<img src="NayvarRavi-Chandar2015.png">
+<img src="NayyarEtAl2015.png">
 </td>
 <td>
-<a href="NayvarRavi-Chandar2015.pdf">NayvarRavi-Chandar2015</a>
+<a href="NayyarEtAl2015.pdf">NayyarEtAl2015</a>
 </td>
 <td>
 <b>Notes:</b> 
@@ -339,12 +339,12 @@ amplitude of the wrinkles initially increases with (post-critical)
 </ul>
 <!--     ........UNCOMMENT THIS TO ADD SCANNED NOTES......... -->
 <!-- 
-<b>Scanned Notes:</b> <a href="NayvarRavi-Chandar2015_notes.pdf">NayvarRavi-Chandar2015_notes.pdf</a>
+<b>Scanned Notes:</b> <a href="NayyarEtAl2015_notes.pdf">NayyarEtAl2015_notes.pdf</a>
 -->
 <!--     ........END UNCOMMENT THIS TO ADD SCANNED NOTES..... -->
 </td>
 </tr>
-<!-- ========END NayvarRavi-Chandar2015 ============================================ -->
+<!-- ========END NayyarEtAl2015 ============================================ -->
 
 
 <!-- ========START Steigmann2013a ============================================ -->
@@ -365,8 +365,24 @@ with respect to the midplane. It also assumes isotropic plates properties.
 <li> The model has to satisfy certain constitutive requirements, which are 
 outlined in [Steigmann, 2003] which encompasses the materials studied by 
 [Carroll, 1988].
-<li> Comment (D): I think this will include the normal Kirchhoff St Venant model
-, but I have not managed to decipher [Steigmann, 2003] yet..
+<li> The model has to be hyperelastic: as the derivation assumes the existance
+of a strain-energy density function. This means whatever model used must be
+conservative.
+<li> The only restriction on the constitutive hypothesis is that the strain energy:
+<i> U</i>(<b> F</b>)=<i>W</i>(<b> E</b>) where 
+<b> E</b> =(<b> F</b><b> F</b><sup>T</sup>-<b> I</b>)/2 where <b> I</b> is the 
+identity for three space and <b>F</b> is the deformation gradient .
+<li> This (apparently) has been explained in [Steigmann, 2003] and includes
+the models studied by [Carroll, 1988]. These models encompass the Mooney-Rivlin
+and by extension the Neo-Hookean model and also Kirchhoff-St Venant (which was 
+used by [Taylor et al 2014,2015]).
+<li> Relies on the scaling assumption that stress |<b> S</b>|=o(1) in terms of h,
+ in other words stress vanishes with vanishing thickness (c.f. FvK with more 
+specific assumptions about h scaling).
+<li> This is needed to form a well--posed two dimensional variational problem, and
+has the consequence that the constitutive part of the bending energy is evaluated 
+at <i>zero strain </i>: therefore the constitutive relation modifies only the 
+membrane part.
 <li> It is well--posed as a minimisation problem, but no  existence and 
 uniqueness theorems have been proven. 
 <li> This is the model [Taylor, Bertoldi 2014]  use and also 
@@ -397,7 +413,7 @@ uniqueness theorems have been proven.
 <li> This presents the nonlinear Koiter theory of shells and places it in 
 relation to 3D nonlinear elasticity. It additionally presents an extension to 
 finite midsurface strains, which restricts the model to Kirchhoff St Venant 
-consituitive laws.
+constitutive laws.
 <li> This article presents an alternative derivation of Koiters shell theory that
   allows an insight into its usefulness and scope in relation to 3D elasticity.
 <li> As with all these models it is assumed that h &lt; &lt; L 
@@ -405,12 +421,17 @@ consituitive laws.
 properties is made.
 <li> This shows exactly how the original Koiter model and the Steigmann-Koiter 
 model differ: on the stress assumption.
-<li> For the Koiter model then, weakly non--linear extension to the Kirchhoff-St 
-Venant model are appropriate.
-<li> The final assumption Stiegmann makes for his model is that the midsurface 
+<li> First it makes the same constitutive assumption as [Steigmann, 2013b] but
+we aren't done. We need the assumption the we can separate the bending and stretching
+energies.
+<li> The final assumption Steigmann makes for his model is that the midsurface 
 stress, S= o(1), and thus vanishes with vanishing thickness, as opposed to the 
 Koiter model which assumes that the stress  scales as S= a h + b h^2, with a and
  b independent of h.
+<li> For the Koiter model then, weakly non--linear extension to the Kirchhoff-St 
+Venant model are appropriate, but the separable energies are implied by the scaling
+assumption. The a priori restriction to Kirchhoff-St Venant is not necessary, but the
+strain.
 <li> If the weaker assumption is used, the constitutive function has to be 
 Kirchhoff-St Venant which gives separable bending and stretching energies.
 <li> This article proposes the model of [Steigmann, 2013a] as an alternative to 
@@ -472,7 +493,7 @@ wrinkling.
 <li> The assumptions drastically simplify the problem, but capture the essence 
 of the behaviour (certainly in hindsight with more complex studies such as 
 [Puntel, et al. 2010],  and numerics of reduced or full problems 
-[Kim, et al. 2010][Nayvar et al. 2011]) which is a credit to the sheer intuition
+[Kim, et al. 2010][Nayyar et al. 2011]) which is a credit to the sheer intuition
  of the authors.
 <li> They suggest the use of geometrically non--linear elasticity, but even so 
 the Foppl von Karman--like functional they use is probably inappropriate for the 
@@ -589,16 +610,23 @@ energies) and an approximation that the deformed normal
 <li> This is justified by the relative sizes of the wrinkle amplitude and
 wrinkle wavelength.
 <li> The models are effectively all von Karman-like  with different membrane 
-terms due to different constituitive equations.
+terms due to different constitutive equations.
 <li> Purports that the KSV model is not as "good" as the Mooney-Rivlin and 
 neo--Hookean, (which is to be expected at the large strains).
 <li> Claims that the deficiency in the KSV model is in the membrane part of 
 the model, and therefore Steigmann/Koiter models still suffer from the same 
 problem.
-<li> This is really just a comparison of FvK with different constituitive models
+<li> References the Steigmann-Koiter <i> shell </i> model for this rather than the
+plate model. The plate model seems to all intents and purposes be valid for most
+hyper-elastic models (incl. Mooney Rivlin, Neo--Hookean and Kirchhoff-St Venant).
+<li> Interestingly the assumption that the bending part uses linear elasticity  whilst
+the stretching part must be hyperelastic is derived by Steigmann, but Steigmann
+bending energy includes in--plane contributions due to the finite rotation of the
+normal to the sheet in the deformed reference frame.
+<li> This is really just a comparison of FvK with different constitutive models
  at high strain, rather than an investigation of "the best" thin plate model.
 <li> It is probably to be expected that at high strains the dominant effects are
- from the consitiutive model, rather than the plate approximations used. This
+ from the constitutive model, rather than the plate approximations used. This
 problem would affect 3D elasticity in much the same way.
 <li> This article is still in press and has not been published yet.
 </ul>
@@ -611,6 +639,155 @@ problem would affect 3D elasticity in much the same way.
 </tr>
 <!-- ========END LiHealey2015 ============================================ -->
 
+<!-- ========START Zheng2009 ============================================ -->
+<tr>
+<td>
+<img src="Zheng2009.png">
+</td>
+<td>
+<a href="Zheng2009.pdf">Zheng2009</a>
+</td>
+<td>
+<b>Notes:</b> 
+<ul>
+<li> bla
+<li> bla
+</ul>
+<!--     ........UNCOMMENT THIS TO ADD SCANNED NOTES......... -->
+<!-- 
+<b>Scanned Notes:</b> <a href="Zheng2009_notes.pdf">Zheng2009_notes.pdf</a>
+-->
+<!--     ........END UNCOMMENT THIS TO ADD SCANNED NOTES..... -->
+</td>
+</tr>
+<!-- ========END Zheng2009 ============================================ -->
+
+<!-- ========START NayyarEtAl2011 ============================================ -->
+<tr>
+<td>
+<img src="NayyarEtAl2011.png">
+</td>
+<td>
+<a href="NayyarEtAl2011.pdf">NayyarEtAl2011</a>
+</td>
+<td>
+<b>Notes:</b> 
+<ul>
+<li><b> Disclaimer: this paper has many admirable elements, despite any critiscim.
+This includes the first study of large strain behaviour in thin sheets. It also 
+takes care to investigate the link between compressive stress and wrinkling,
+which creates a useful addition to the literature.</b>
+<li> Uses some form of Abaqus hyperelestic shell model for simulations.
+<li> Has no explanation of the model used other than that it is Neo-Hookean
+<li> This paper does not state what the boundary conditions on "w" are or write
+down any equations!
+<li> Abaqus is based on the Koiter model, which uses slightly different 
+assumptions to Steigmann model for the strain scaling (see [Steigmann 2013b]).
+<li> Using stress analysis (in other words pinning w=0 and solving for u and v) 
+with a hyperelastic (NH) model, the sheets which have compressive stress are
+analysed for a range of aspect ratio &alpha; and strain &epsilon;.
+<li> This analysis highlights several different qualitative behaviours in the
+compressive stresses (see graph).
+<a href="NayyarEtAl_stress_phase_diagram.jpg"><img width=300 src="NayyarEtAl_stress_phase_diagram.jpg"></a>
+<li> Phase I: the stress is tensile. Phase II: There is localised compression on
+the centre line near the two edges. Phase III: the compression occurs only in
+the centre of the sheet. Finally phase IV: the peak compressive region split into
+two along the transverse direction.
+<li> An eigenvalue buckling analysis (LSA) of the wrinkling problem (w, u, v) at
+1% (pre)stretch. Before buckling all of the eigenvalues of the FEM Jacobian are 
+negative, presumably then Nayyer increases &alpha; each time a new eigenvalue 
+becomes positive, and then finds the corresponding eigenmode.
+<li> The implementation of this seems slightly peculiar, four values of &alpha; 
+are picked (in the four regimes indicated by the stress analysis) and then the
+lowest eigenmode is picked. Nayyar mentions that continuation in stress could
+also be performed.
+<li> The wrinkling mode that become available display qualitatively similar
+behaviour to the compression phases. In phase I there is no wrinkling, phase II
+there are lateral split modes. Phase II there are centred modes and in Phase 4
+there are transversely split modes.
+<li> A basic model for estimating the stress is borrowed from [Freidl et
+al 2000] and modified slightly using results from [Timoshenko, Gere 1986].
+<li> The minimum of this stress is found keeping "a" constant. See the cdf plot
+for a plot of the predicted stress versus aspect ratio.
+<li> In the simplified model the minimum stress is independent of aspect
+ratio: only the wavenumber depends on aspect ratio. For large aspect ratios the
+the critical stress is approximately constant and equal to the minimum positive
+stress of the graph.
+<li> This does not seem to be borne out in the numerics: we would expect that as
+aspect ratio is increased the onset strain saturates.
+<li> The model is used, in conjunction with the known behaviour of the tensile
+to compressive stain ratio, to predict that wrinkling may only occur for a
+specific range of nominal strain.
+<li> The model also predicts the correct scaling with thickness, which is to be
+expected.
+<li> The model is barely used: it predicts at fixed strain that the buckling
+modes that are available will  increase with aspect ratio, and each time the new
+mode will have one more mode.
+<li> The model also predicts that the onset strain will be ~ 0.011, which as an
+order of magnitude agrees well with the results!
+<li> It is not mentioned that the model erroneously predicts that the wrinkling
+will always be lateral, whereas modes with two transverse wrinkles are found!
+<li> The onset stress results of [Puntel, Deseri 2011] disagree with the results
+of this paper by orders of magnitude, which is put down to the boundary
+conditions (which are different in both stress and possibly w). 
+<li> They then perform a post-buckling analysis using the RIKS methid. They a
+sum of four of the onset modes as initial perturbations with an amplitude of 0.1% 
+of the sheet thickness.
+<li> They do not perform any analysis of the sensitivity to initial
+perturbations. This is performed in [Nayyer 2010].
+<li> They show that for hyperelastic models, contrary to Fvk, the amplitude does
+not increase monotonically.
+<li> Purportedly linear elastic models predict the same behaviour ([Nayyer
+2010]). 
+<li> (Comment:) I could not find this in the thesis, but it would not surprise me 
+if KSV displayed this behaviour. If a moderate rotation (FVK) constitutive model 
+was adopted I expect it would agree well with Mahadevan (although the ABAQUS 
+model may implement a differing bending energy).
+<li> The scaling law for wavenumber agrees very well the prediction by
+Cerda and Mahadaven, again a tribute to their incredible physical insight!
+
+<embed src="NayyarModel.cdf" width="588" height="380">
+</ul>
+<!--     ........UNCOMMENT THIS TO ADD SCANNED NOTES......... -->
+<!-- 
+<b>Scanned Notes:</b> <a href="NayyarEtAl2011_notes.pdf">NayyarEtAl2011_notes.pdf</a>
+-->
+<!--     ........END UNCOMMENT THIS TO ADD SCANNED NOTES..... -->
+</td>
+</tr>
+<!-- ========END NayyarEtAl2011 ============================================ -->
+
+<!-- ========START CerdaEtAl2002 ============================================ -->
+<tr>
+<td>
+<img src="CerdaEtAl2002.png">
+</td>
+<td>
+<a href="CerdaEtAl2002.pdf">CerdaEtAl2002</a>
+</td>
+<td>
+<b>Notes:</b> 
+<ul>
+<li> Basic experiment and simpler derivation of scaling argument of the later paper.
+<li> Uses U_b+U_s in terms of the wavelength and amplitude. Uses inextensibility to
+ determine the amplitude in terms of the wavelength. Uses this to derive the famous
+ scaling law.
+<li> The experiment which stretched a thin sheet agrees well with the scaling law, 
+ but there are no error bars which would help to determine what sort of a range of
+ scaling exponents would agree with the data.
+<li> There is an observable data collapse of several lengths of sheets, which again
+ supports the scaling argument.
+<li> Lovely concise explanation of observable phenomena in thin sheets, supplements
+ the more detailed approach of [Cerda and Mahadevan, 2003]
+</ul>
+<!--     ........UNCOMMENT THIS TO ADD SCANNED NOTES......... -->
+<!-- 
+<b>Scanned Notes:</b> <a href="CerdaEtAl2002_notes.pdf">CerdaEtAl2002_notes.pdf</a>
+-->
+<!--     ........END UNCOMMENT THIS TO ADD SCANNED NOTES..... -->
+</td>
+</tr>
+<!-- ========END CerdaEtAl2002 ============================================ -->
 
 
 </table>

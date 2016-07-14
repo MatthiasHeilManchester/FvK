@@ -647,8 +647,80 @@ problem would affect 3D elasticity in much the same way.
 <td>
 <b>Notes:</b> 
 <ul>
-<li> bla
-<li> bla
+<li><b> Disclaimer: this paper has many admirable elements, despite any critiscim.
+This includes the first study of large strain behaviour in thin sheets. It also 
+takes care to investigate the link between compressive stress and wrinkling,
+which creates a useful addition to the literature.</b>
+<li> Uses some form of Abaqus hyperelestic shell model for simulations.
+<li> Has no explanation of the model used other than that it is Neo-Hookean
+<li> This paper does not state what the boundary conditions on "w" are or write
+down any equations!
+<li> Abaqus is based on the Koiter model, which uses slightly different 
+assumptions to Steigmann model for the strain scaling (see [Steigmann 2013b]).
+<li> Using stress analysis (in other words pinning w=0 and solving for u and v) 
+with a hyperelastic (NH) model, the sheets which have compressive stress are
+analysed for a range of aspect ratio &alpha; and strain &epsilon;.
+<li> This analysis highlights several different qualitative behaviours in the
+compressive stresses (see graph).
+<a href="NayyarEtAl_stress_phase_diagram.jpg"><img width=300 src="NayyarEtAl_stress_phase_diagram.jpg"></a>
+<li> Phase I: the stress is tensile. Phase II: There is localised compression on
+the centre line near the two edges. Phase III: the compression occurs only in
+the centre of the sheet. Finally phase IV: the peak compressive region split into
+two along the transverse direction.
+<li> An eigenvalue buckling analysis (LSA) of the wrinkling problem (w, u, v) at
+1% (pre)stretch. Before buckling all of the eigenvalues of the FEM Jacobian are 
+negative, presumabely then Nayyer increases &alpha; each time a new eigenvalue 
+becomes positive, and then finds the corresponding eigenmode.
+<li> The implementation of this seems slightly peculiar, four values of &alpha; 
+are picked (in the four regimes indicated by the stress analysis) and then the
+lowest eigenmode is picked. Nayyar menetions that continuation in stress could
+also be performed.
+<li> The wrinkling mode that become available display qualitatively similar
+behaviour to the compression phases. In phase I there is no wrinkling, phase II
+there are lateral split modes. Phase II there are centred modes and in Phase 4
+there are transversely split modes.
+<li> A basic model for estimating the stress is borrowed from [Freidl et
+al 2000] and modified slightly using results from [Timoshenko, Gere 1986].
+<li> The minimum of this stress is found keeping "a" constant. See the cdf plot
+for a plot of the predicted stress versus aspect ratio.
+<li> In the simplified model the minimum stress is independent of aspect
+ratio: only the wavenumber depends on aspect ratio. For large aspect ratios the
+the critical stress is approximately constant and equal to the minimum positive
+stress of the graph.
+<li> This does not seem to be borne out in the numerics: we would expect that as
+aspect ratio is increased the onset strain saturates.
+<li> The model is used, in conjunction with the known behaviour of the tensile
+to compressive stain ratio, to predict that wrinkling may only occur for a
+specific range of nominal strain.
+<li> The model also predicts the correct scaling with thickness, which is to be
+expected.
+<li> The model is barely used: it predicts at fixed strain that the buckling
+modes that are available will  increase with aspect ratio, and each time the new
+mode will have one more mode.
+<li> The model also predicts that the onset strain will be ~ 0.011, which as an
+order of magnitude agrees well with the results!
+<li> It is not mentioned that the model erroneously predicts that the wrinkling
+will always be lateral, whereas modes with two transverse wrinkles are found!
+<li> The onset stress results of [Puntel, Deseri 2011] disagree with the results
+of this paper by orders of magnitude, which is put down to the boundary
+conditions (which are different in both stress and possibly w). 
+<li> They then perform a post-buckling analsysis using the RIKS methid. They a
+sum of four of the onset modes as initial perturbations with an amplitude of 0.1% 
+of the sheet thickness.
+<li> They do not perform any analysis of the sensitivity to initial
+perturbations. This is performed in [Nayyer 2010].
+<li> They show that for hyperelastic models, contrary to Fvk, the amplitude does
+not increase monotonically.
+<li> Purportedely linear elastic models predict the same behaviour ([Nayyer
+2010]). 
+<li> (Comment:) I could not find this in the thesis, but it would not surprise me 
+if KSV displayed this behaviour. If a moderate rotation (FVK) constiuitive model 
+was adopted I expect it would agree well with Mahadevan (although the ABAQUS 
+model may implement a differing bending energy).
+<li> The scaling law for wavenumber agrees very well the prediction by
+Cerda and Mahadaven, again a tribute to their incredible physical insight!
+
+<embed src="NayyarModel.cdf" width="588" height="380">
 </ul>
 <!--     ........UNCOMMENT THIS TO ADD SCANNED NOTES......... -->
 <!-- 
